@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/b"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Telefono">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nmbr"
+        android:layout_width="365dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:hint="Introduce el número de teléfono"
+        android:inputType="phone"
+        app:layout_constraintVertical_bias="0.414"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <Button
+        android:id="@+id/cbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="150dp"
+        android:text="Llamar"
+        app:layout_constraintTop_toBottomOf="@+id/nmbr"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="171dp" />
+
+    <Button
+        android:id="@+id/btras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="50dp"
+        android:text="Atrás"
+        app:layout_constraintTop_toBottomOf="@+id/btras"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="171dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
