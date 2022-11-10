@@ -15,6 +15,7 @@ public class Ajustes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ajustes);
 
+//--------------------------------------------------------------------------------------------
         //Botón del perfil personal
         Button Bpersonal = (Button) findViewById(R.id.Bpersonal);
         Bpersonal.setOnClickListener(new View.OnClickListener() {
@@ -25,6 +26,7 @@ public class Ajustes extends AppCompatActivity {
             }
         });
 
+//--------------------------------------------------------------------------------------------
         //Botón del perfil de empresa
         Button Bempresa = (Button) findViewById(R.id.Bempresa);
         Bempresa.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +37,7 @@ public class Ajustes extends AppCompatActivity {
             }
         });
 
+//--------------------------------------------------------------------------------------------
         //Botón ATRÁS
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button buttonAtras = (Button) findViewById(R.id.butonAtras);
         buttonAtras.setOnClickListener(new View.OnClickListener() {
