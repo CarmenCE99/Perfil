@@ -117,12 +117,32 @@ public class PerfilEmpresa extends AppCompatActivity {
                 nuevoRegistro.put("instagram", ig);
                 nuevoRegistro.put("twitter", tw);
                 db.insert("Perfil", null, nuevoRegistro);
+
+//-------------------------------------------------------------------------------------------------
+                Integer i = new Integer(nombre);
+                StringBuilder sb = new StringBuilder(); // or StringBuffer
+                sb.append(i);
+
+
+                // Convertir esas String a números Int, porque no podemos sumar cadenas
+           //     String nombree = Integer.toString(Integer.parseInt(nombre));
+
+                // Crear un Intent para cambiar
+                Intent intent = new Intent(PerfilEmpresa.this, MainActivity.class);
+                // Agregarle los datos que le pasamos
+                // Nota: "datos" es la clave con la que lo vamos a obtener "del otro lado"
+                intent.putExtra("datos", (CharSequence) sb);
+
+                // Y ahora que ya tiene datos, cambiamos de actividad
+                // Nos vemos en MainActivity
+                startActivity(intent);
+//-------------------------------------------------------------------------------------------------
             }
         });
 
 
 
-        btnConsultar.setOnClickListener(new View.OnClickListener() {
+       /* Bguardar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 //Alternativa 1: método rawQuery()
@@ -134,7 +154,7 @@ public class PerfilEmpresa extends AppCompatActivity {
                 //Cursor c = db.query("Usuarios", campos, null, null, null, null, null);
 
                 //Recorremos los resultados para mostrarlos en pantalla
-                txtResultado.setText("");
+//                txtResultado.setText("");
                 if (c.moveToFirst()) {
                     //Recorremos el cursor hasta que no haya más registros
                     do {
@@ -154,7 +174,7 @@ public class PerfilEmpresa extends AppCompatActivity {
                     } while(c.moveToNext());
                 }
             }
-        });
+        });*/
     }
 
     @Override

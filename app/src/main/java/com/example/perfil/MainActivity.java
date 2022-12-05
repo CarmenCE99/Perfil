@@ -31,6 +31,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//----------------------------------------------------------------------------------------------------------
+
+        // Obtener los datos que nos pasaron
+        Intent intent = getIntent();
+        String datosQueNosPasaron = intent.getStringExtra("datos");
+
+        // Obtener Widget de vista
+        TextView textView = findViewById(R.id.nombreapellidos);
+
+        // Armar un mensaje
+        String mensaje = "" + datosQueNosPasaron;
+        // Y ponerle el mensaje
+        textView.setText(mensaje);
+
 //---------------------------------------------------------------------------------------------------------------------
 
         //Código: https://codea.app/blog/lanzar-un-link

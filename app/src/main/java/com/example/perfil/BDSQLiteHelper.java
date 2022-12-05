@@ -30,7 +30,7 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
         //      ser más elaborado.
 
         //Se elimina la versión anterior de la tabla
-        db.execSQL("DROP TABLE IF EXISTS Transporte");
+        db.execSQL("DROP TABLE IF EXISTS Perfil");
 
         //Se crea la nueva versión de la tabla
         db.execSQL(sqlCreate);
