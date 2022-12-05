@@ -47,7 +47,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/nombre"
+                android:id="@+id/Txnombre"
                 android:layout_width="365dp"
                 android:layout_height="50dp"
                 android:background="#E8E8E8"
@@ -83,7 +83,7 @@
                 tools:ignore="MissingConstraints" />
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/Txemail"
                 android:layout_width="365dp"
                 android:layout_height="50dp"
                 android:background="#E8E8E8"

@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 //------------------------------------------------------------------------------------------------------------------------------
-          //Botón de Llamadas
+        //Botón de Llamadas
         ImageView ImgTelefono = (ImageView) findViewById(R.id.ImgTelefono);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) final EditText mPhoneNoEt = (EditText) findViewById(R.id.nmbr);
 

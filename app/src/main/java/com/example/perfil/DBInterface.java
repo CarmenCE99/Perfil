@@ -43,7 +43,7 @@ public class DBInterface {
                     CAMPO_WEB+"TEXT"+
                     CAMPO_FACEBOOK+"TEXT"+
                     CAMPO_INSTAGRAM+"TEXT"+
-                    CAMPO_TWITTER+"TEXT";
+                    CAMPO_TWITTER+"TEXT"+")";
 
     private final Context contexto;
     private AyudaDB ayuda;
@@ -115,11 +115,9 @@ public class DBInterface {
         /*return bd.update(BD_TABLA, newValues, CAMPO_ID + "=" + id, CAMPO_NOMBRE + "=" + Nombre, CAMPO_APELLIDO1 + "=" + Apellido1,
                 CAMPO_APELLIDO2 + "=" + Apellido2, CAMPO_BIOGRAFIA + "=" + Biografia, CAMPO_EMPRESA + "=" + Empresa, CAMPO_EMAIL + "=" + Email, CAMPO_TELEFONO + "=" + Telefono,
                 CAMPO_DIRECCION + "=" + Direccion, CAMPO_WEB + "=" + Web, CAMPO_FACEBOOK + "=" + Facebook, CAMPO_INSTAGRAM + "=" + Instagram, CAMPO_TWITTER + "=" + Twitter,  null);*/
-
     }
 
     public long borrarRegistro(long id) {
-
         return bd.delete(BD_TABLA, CAMPO_ID + "=" + id, null);
     }
 

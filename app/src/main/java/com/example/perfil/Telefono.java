@@ -29,8 +29,8 @@ public class Telefono extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Button cbtn = (Button)findViewById(R.id.cbtn);
-        TextView nmbr = (TextView) findViewById(R.id.nmbr);
+        Button cbtn = (Button)findViewById(R.id.cbtn); //Botón para llamar
+        TextView nmbr = (TextView) findViewById(R.id.nmbr); //Campo de texto para el número de teléfono
 
         binding = ActivityTelefonoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -62,8 +62,8 @@ public class Telefono extends AppCompatActivity {
                         String num = nmbr.getText().toString(); // Guardamos el numero de telefono en un string
                         if(num!="") { // Verificamos si el numero de telefono no esta vacio
                             Uri number = Uri.parse("tel:" + num); // Creamos una uri con el numero de telefono
-                            Intent dial = new Intent(Intent.ACTION_DIAL, number); // Creamos una llamada al Intent de llamadas
-                            startActivity(dial); // Ejecutamos el Intent
+                            Intent cbtn = new Intent(Intent.ACTION_DIAL, number); // Creamos una llamada al Intent de llamadas
+                            startActivity(cbtn); // Ejecutamos el Intent
                         }else{ // Si el numero esta vacio
                             // Mostramos una alerta de que debemos escribir un numero
                             AlertDialog.Builder alert1 = new AlertDialog.Builder(Telefono.this);

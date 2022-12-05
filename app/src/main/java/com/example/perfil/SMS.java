@@ -18,6 +18,7 @@ public class SMS extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sms);
 
+        //Botón enviar SMS
         Button sendMessageBtn = (Button) findViewById(R.id.btn_send_message);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) final EditText messagetEt = (EditText) findViewById(R.id.et_message); //mensaje que se envía
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) final EditText mPhoneNoEt = (EditText) findViewById(R.id.nmbr); //número desde el que se envía
