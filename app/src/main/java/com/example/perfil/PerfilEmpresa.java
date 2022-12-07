@@ -18,7 +18,8 @@ import android.widget.Toolbar;
 public class PerfilEmpresa extends AppCompatActivity {
 
     private EditText Txnombre;
-    private EditText apellido;
+    private EditText apellido11;
+    private EditText apellido22;
     private EditText biografía;
     private EditText empresa;
     private EditText Txemail;
@@ -61,7 +62,8 @@ public class PerfilEmpresa extends AppCompatActivity {
 //------GUARDO LOS TEXTVIEWS EN VARIABLES-------------------------------------------
         //Obtenemos las referencias a los controles
         Txnombre = (EditText)findViewById(R.id.Txnombre);
-        apellido = (EditText)findViewById(R.id.apellidos);
+        apellido11 = (EditText) findViewById(R.id.apellido1);
+        apellido22 = (EditText)findViewById(R.id.apellido2);
         biografía = (EditText)findViewById(R.id.biografía);
         empresa = (EditText)findViewById(R.id.empresa);
         Txemail = (EditText)findViewById(R.id.Txemail);
@@ -88,7 +90,8 @@ public class PerfilEmpresa extends AppCompatActivity {
 
                 //Recuperamos los valores de los campos de texto
                 String nombre = Txnombre.getText().toString();
-                String apellidos = apellido.getText().toString();
+                String apellido1 = apellido11.getText().toString();
+                String apellido2 = apellido22.getText().toString();
                 String bio = biografía.getText().toString();
                 String empre = empresa.getText().toString();
                 String email = Txemail.getText().toString();
@@ -106,7 +109,8 @@ public class PerfilEmpresa extends AppCompatActivity {
                 //Alternativa 2: método insert()
                 ContentValues nuevoRegistro = new ContentValues();
                 nuevoRegistro.put("nombre", nombre);
-                nuevoRegistro.put("apellido", apellidos);
+                nuevoRegistro.put("apellido1", apellido1);
+                nuevoRegistro.put("apellido2", apellido2);
                 nuevoRegistro.put("biografia", bio);
                 nuevoRegistro.put("empresa", empre);
                 nuevoRegistro.put("email", email);
@@ -123,9 +127,8 @@ public class PerfilEmpresa extends AppCompatActivity {
                 StringBuilder sb = new StringBuilder(); // or StringBuffer
                 sb.append(i);
 
-
                 // Convertir esas String a números Int, porque no podemos sumar cadenas
-           //     String nombree = Integer.toString(Integer.parseInt(nombre));
+                String nombree = Integer.toString(Integer.parseInt(nombre));
 
                 // Crear un Intent para cambiar
                 Intent intent = new Intent(PerfilEmpresa.this, MainActivity.class);
@@ -136,6 +139,22 @@ public class PerfilEmpresa extends AppCompatActivity {
                 // Y ahora que ya tiene datos, cambiamos de actividad
                 // Nos vemos en MainActivity
                 startActivity(intent);
+
+                Integer a = new Integer(apellido1);
+                StringBuilder aa = new StringBuilder();
+                aa.append(a);
+                String apellido11 = Integer.toString(Integer.parseInt(apellido1));
+                Intent intenta = new Intent(PerfilEmpresa.this, MainActivity.class);
+                intenta.putExtra("apellidoa", (CharSequence) aa);
+                startActivity(intenta);
+
+                Integer a2 = new Integer(apellido2);
+                StringBuilder aaa = new StringBuilder();
+                aaa.append(a2);
+                String apellido22 = Integer.toString(Integer.parseInt(apellido2));
+                Intent intentaa = new Intent(PerfilEmpresa.this, MainActivity.class);
+                intentaa.putExtra("apellidoaa", (CharSequence) aaa);
+                startActivity(intentaa);
 //-------------------------------------------------------------------------------------------------
             }
         });

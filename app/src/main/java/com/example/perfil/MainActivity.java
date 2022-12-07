@@ -35,15 +35,26 @@ public class MainActivity extends AppCompatActivity {
 
         // Obtener los datos que nos pasaron
         Intent intent = getIntent();
+        Intent intenta = getIntent();
+        Intent intentaa = getIntent();
         String datosQueNosPasaron = intent.getStringExtra("datos");
+        String apellidoQueNosPasaron = intenta.getStringExtra("apellidoa");
+        String apellido2QueNosPasaron = intentaa.getStringExtra("apellidoaa");
+
 
         // Obtener Widget de vista
-        TextView textView = findViewById(R.id.nombreapellidos);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView textView = findViewById(R.id.nombre);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView textViewa = findViewById(R.id.apellido1);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView textViewaa = findViewById(R.id.apellido2);
 
         // Armar un mensaje
         String mensaje = "" + datosQueNosPasaron;
+        String mapellido = "" + apellidoQueNosPasaron;
+        String mapellido2 = "" + apellido2QueNosPasaron;
         // Y ponerle el mensaje
         textView.setText(mensaje);
+        textViewa.setText(mapellido);
+        textViewaa.setText(mapellido2);
 
 //---------------------------------------------------------------------------------------------------------------------
 

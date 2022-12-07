@@ -56,7 +56,16 @@
                 tools:ignore="MissingConstraints" />
 
             <EditText
-                android:id="@+id/apellidos"
+                android:id="@+id/apellido1"
+                android:layout_width="365dp"
+                android:layout_height="50dp"
+                android:background="#E8E8E8"
+                android:hint=" Apellidos"
+                android:inputType=""
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/apellido2"
                 android:layout_width="365dp"
                 android:layout_height="50dp"
                 android:background="#E8E8E8"
